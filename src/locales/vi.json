@@ -1,0 +1,24 @@
+{
+    "job_title": "Kỹ sư Frontend",
+    "about": "Giới thiệu",
+    "experience": "Kinh nghiệm",
+    "projects": "Dự án",
+    "hero_title": "Xin chào, tôi là Brittany Chiang",
+    "hero_description": "Tôi xây dựng các trải nghiệm web chính xác và thân thiện với người dùng.",
+    "about_section": {
+      "title": "Brittany Chiang",
+      "description_1": "Tôi là một Frontend Developer đam mê tạo ra những trải nghiệm web mượt mà, tối ưu và trực quan. Hiện tôi đang theo học tại Trường cao đẳng FPT Polytechnic, chuyên ngành Lập trình web. Trong quá trình học tập, tôi đã thực hiện nhiều dự án cá nhân và nhóm, giúp nâng cao kỹ năng lập trình, tư duy thiết kế UI/UX và tối ưu hóa giao diện người dùng.",
+      "short_term_goals": {
+        "title": "Mục tiêu ngắn hạn",
+        "goal_1": "Phát triển kỹ năng Frontend chuyên sâu, đặc biệt là React, Next.js, TypeScript.",
+        "goal_2": "Nâng cao kỹ năng làm việc nhóm trong môi trường Agile/Scrum.",
+        "goal_3": "Cải thiện kỹ năng Tiếng Anh chuyên ngành IT để giao tiếp và đọc tài liệu tốt hơn."
+      },
+      "long_term_goals": {
+        "title": "Mục tiêu dài hạn",
+        "goal_1": "Trở thành Frontend Developer chuyên nghiệp, xây dựng UI/UX mượt mà, tối ưu hiệu suất và nâng cao trải nghiệm người dùng.",
+        "goal_2": "Học thêm Backend (Node.js, NestJS, MongoDB/PostgreSQL) để phát triển thành Full Stack Developer",
+        "goal_3": "Liên tục cập nhật công nghệ mới, nâng cao tư duy lập trình và giải quyết vấn đề."
+      }
+    }
+  }

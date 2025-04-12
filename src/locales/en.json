@@ -1,0 +1,24 @@
+{
+    "job_title": "Front End Engineer",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "hero_title": "Hi, I'm Brittany Chiang",
+    "hero_description": "I build accessible, pixel-perfect digital experiences for the web.",
+    "about_section": {
+        "title": "Brittany Chiang",
+        "description_1": "I am a Frontend Developer passionate about creating smooth, optimized, and intuitive web experiences. I am currently studying at FPT Polytechnic College, majoring in Web Development. Throughout my studies, I have worked on various personal and group projects, helping me improve my programming skills, UI/UX design thinking, and user interface optimization.",
+        "short_term_goals": {
+            "title": "Short-term Goals",
+            "goal_1": "Develop in-depth Frontend skills, especially in React, Next.js, and TypeScript.",
+            "goal_2": "Enhance teamwork skills in an Agile/Scrum environment.",
+            "goal_3": "Improve IT-related English skills to communicate and read technical documents better."
+        },
+        "long_term_goals": {
+            "title": "Long-term Goals",
+            "goal_1": "Become a professional Frontend Developer, capable of building smooth UI/UX, optimizing performance, and improving user experience.",
+            "goal_2": "Expand knowledge in Backend (Node.js, NestJS, MongoDB/PostgreSQL) to become a Full Stack Developer.",
+            "goal_3": "Continuously update on new technologies, enhance programming thinking, and problem-solving skills."
+        }
+    }
+}
