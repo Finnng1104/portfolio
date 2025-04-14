@@ -1,3 +1,4 @@
+// Home.tsx
 "use client";
 import { useEffect, useState } from "react";
 import About from "@/components/About";
@@ -44,25 +45,25 @@ const Home = () => {
   }, [activeSection]);
 
   return (
-    <main className="flex flex-col md:flex-row min-h-screen w-full">
-      {/* Sidebar: ẩn trên mobile */}
-      <div className="hidden md:block md:w-2/5 lg:w-2/6 xl:w-1/4">
-        <Sidebar activeSection={activeSection} />
-      </div>
+    <main className="grid grid-cols-1 md:grid-cols-5 min-h-screen w-full">
+  {/* Sidebar: chiếm 2/5 từ md trở lên */}
+  <div className="hidden md:block md:col-span-2">
+    <Sidebar activeSection={activeSection} />
+  </div>
 
-      {/* Main Content */}
-      <div className="w-full md:w-3/5 lg:w-4/6 xl:w-3/4 px-4 md:px-8 lg:px-12 pt-24 flex flex-col gap-12">
-        <section id="about" className="scroll-mt-24">
-          <About />
-        </section>
-        <section id="experience" className="scroll-mt-24">
-          <ExperienceSection />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-      </div>
-    </main>
+  {/* Main Content: chiếm 3/5 */}
+  <div className="col-span-1 md:col-span-3 px-4 sm:px-6 md:px-12 pt-24 flex flex-col gap-12">
+    <section id="about" className="scroll-mt-24">
+      <About />
+    </section>
+    <section id="experience" className="scroll-mt-24">
+      <ExperienceSection />
+    </section>
+    <section id="projects">
+      <Projects />
+    </section>
+  </div>
+</main>
   );
 };
 
