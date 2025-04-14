@@ -1,0 +1,71 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "image": "/images/project/bookzone.png",
+        "link": "https://bookzone.io.vn",
+        "techStack": ["NextJS", "Express", "MongoDB", "Vercel"],
+        "i18n": {
+          "en": {
+            "title": "BookZone - The  Book Library",
+            "description": "A free online library offering thousands of ebooks across diverse categories. Built to deliver a fast, secure, and engaging reading experience for all users, with continuous content updates and easy downloads."
+          },
+          "vi": {
+            "title": "BookZone - Thư Viện Sách",
+            "description": "Thư viện đọc sách trực tuyến miễn phí với hàng nghìn đầu sách thuộc nhiều thể loại. Giao diện thân thiện, tốc độ nhanh, cập nhật nội dung liên tục và hỗ trợ tải sách dễ dàng."
+          }
+        }
+      },
+      {
+        "id": 2,
+        "image": "/images/spotify-profile.png",
+        "link": "https://example.com/spotify-profile",
+        "stars": 677,
+        "techStack": ["React", "Express", "Spotify API", "Heroku"],
+        "i18n": {
+          "en": {
+            "title": "Spotify Profile",
+            "description": "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information."
+          },
+          "vi": {
+            "title": "Hồ sơ Spotify",
+            "description": "Ứng dụng web để hiển thị dữ liệu Spotify cá nhân hóa. Xem nghệ sĩ hàng đầu, bài hát, lịch sử phát và thông tin âm thanh chi tiết."
+          }
+        }
+      },
+      {
+        "id": 3,
+        "image": "/images/halcyon-theme.png",
+        "link": "https://example.com/halcyon-theme",
+        "downloads": "100k+ Installs",
+        "techStack": [],
+        "i18n": {
+          "en": {
+            "title": "Halcyon Theme",
+            "description": "Minimal dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more."
+          },
+          "vi": {
+            "title": "Giao diện Halcyon",
+            "description": "Giao diện xanh đậm tối giản cho VS Code, Sublime Text, Atom, iTerm và hơn thế nữa."
+          }
+        }
+      },
+      {
+        "id": 4,
+        "image": "/images/project/country-Api.png",
+        "link": "https://country-api-mu-nine.vercel.app/",
+        "stars": 7780,
+        "techStack": ["Gatsby", "Styled Components", "Netlify"],
+        "i18n": {
+          "en": {
+            "title": "Country Info Explorer",
+            "description": "An interactive web app for exploring countries around the world by name or region. Ideal for learning API integration, working with JSON data, and building filterable UI with responsive design."
+          },
+          "vi": {
+            "title": "Tra cứu thông tin quốc gia",
+            "description": "Ứng dụng web cho phép tra cứu thông tin các quốc gia theo tên hoặc khu vực. Phù hợp để thực hành làm việc với API, dữ liệu JSON, và xây dựng giao diện lọc tương tác, responsive."
+          }
+        }
+      }
+    ]
+  }

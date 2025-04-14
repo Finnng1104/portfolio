@@ -1,65 +1,46 @@
 "use client";
-import { FC } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import axios from "axios";
 import Image from "next/image";
 import { FaExternalLinkAlt, FaStar, FaDownload } from "react-icons/fa";
 
 interface Project {
-  image: string;
+  id: number;
   title: string;
   description: string;
+  image: string;
+  link: string;
   stars?: number;
   downloads?: string;
   techStack: string[];
-  link: string;
 }
 
-const projects: Project[] = [
-  {
-    image: "/images/spotify-app.png",
-    title: "Build a Spotify Connected App",
-    description:
-      "Video course that teaches how to build a web app with the Spotify Web API. Topics covered include REST APIs, user auth flows, Node, Express, React, Styled Components, and more.",
-    techStack: ["React", "Express", "Spotify API", "Heroku"],
-    link: "https://example.com/spotify-app",
-  },
-  {
-    image: "/images/spotify-profile.png",
-    title: "Spotify Profile",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information.",
-    stars: 677,
-    techStack: ["React", "Express", "Spotify API", "Heroku"],
-    link: "https://example.com/spotify-profile",
-  },
-  {
-    image: "/images/halcyon-theme.png",
-    title: "Halcyon Theme",
-    description:
-      "Minimal dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.",
-    downloads: "100k+ Installs",
-    techStack: [],
-    link: "https://example.com/halcyon-theme",
-  },
-  {
-    image: "/images/project/country-Api.png",
-    title: "Country API",
-    description:
-      "Ứng dụng giúp người dùng tra cứu thông tin về các quốc gia trên thế giới. Dành cho nhà phát triển, dự án giúp thực hành gọi API, quản lý dữ liệu và thao tác với tìm kiếm, lọc dữ liệu.",
-    stars: 7780,
-    techStack: ["Gatsby", "Styled Components", "Netlify"],
-    link: "https://country-api-mu-nine.vercel.app/",
-  }
-];
+const Projects = () => {
+  const { i18n } = useTranslation();
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [page, setPage] = useState(1);
+  const limit = 4;
 
-const Projects: FC = () => {
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const res = await axios.get(
+        `/api/projects?lang=${i18n.language}&page=${page}&limit=${limit}`
+      );
+      setProjects(res.data.projects);
+    };
+
+    fetchProjects();
+  }, [i18n.language, page]);
+
   return (
     <section className="w-full py-24">
-      <h2 className="text-3xl font-bold text-white">Projects</h2>
+      <h2 className="text-3xl font-bold text-white mb-10">Projects</h2>
 
       <div className="space-y-8">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
-            key={index}
+            key={project.id}
             className="flex flex-col md:flex-row items-start gap-6 bg-[#112240] p-6 rounded-lg"
           >
             <div className="relative w-full md:w-40 h-32">
@@ -108,10 +89,26 @@ const Projects: FC = () => {
         ))}
       </div>
 
-      <div className="mt-10">
+      {/* Pagination */}
+      <div className="flex justify-center mt-10 space-x-4">
+        <button
+          onClick={() => setPage((p) => Math.max(p - 1, 1))}
+          className="px-4 py-2 bg-[#1E293B] text-gray-200 rounded hover:bg-[#334155]"
+        >
+          Prev
+        </button>
+        <button
+          onClick={() => setPage((p) => p + 1)}
+          className="px-4 py-2 bg-[#1E293B] text-gray-200 rounded hover:bg-[#334155]"
+        >
+          Next
+        </button>
+      </div>
+
+      <div className="mt-10 text-center">
         <a
           href="/archive"
-          className="text-teal-300 flex items-center gap-2 text-lg hover:underline"
+          className="text-teal-300 flex items-center justify-center gap-2 text-lg hover:underline"
         >
           View Full Project Archive →
         </a>
