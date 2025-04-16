@@ -12,12 +12,7 @@ export async function GET(req: Request) {
   const langKey = lang as "en" | "vi";
 
   const projects = data.projects.slice(start, end).map((p) => ({
-    
-    id: p.id,
-    image: p.image,
-    link: p.link,
-    stars: p.stars,
-    techStack: p.techStack,
+    ...p,
     title: p.i18n[langKey]?.title || p.i18n.en.title,
     description: p.i18n[langKey]?.description || p.i18n.en.description,
   }));

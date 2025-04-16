@@ -1,9 +1,7 @@
 "use client";
 import { FC, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { SiCodepen } from "react-icons/si";
-import { BsBook } from "react-icons/bs";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 interface SidebarProps {
@@ -24,11 +22,9 @@ const Sidebar: FC<SidebarProps> = ({ activeSection }) => {
   ];
 
   const socialLinks = [
-    { href: "https://github.com/", icon: <FaGithub /> },
-    { href: "https://linkedin.com/", icon: <FaLinkedin /> },
-    { href: "https://codepen.io/", icon: <SiCodepen /> },
-    { href: "https://instagram.com/", icon: <FaInstagram /> },
-    { href: "https://goodreads.com/", icon: <BsBook /> },
+    { href: "https://gitlab.com/Finnng1104", icon: <FaGithub /> },
+    { href: "https://www.linkedin.com/in/finnng1104/", icon: <FaLinkedin /> },
+    { href: "https://www.facebook.com/Finnng1104/", icon: <FaFacebook /> }
   ];
 
   const handleScrollToSection = (sectionId: string) => {
@@ -39,14 +35,14 @@ const Sidebar: FC<SidebarProps> = ({ activeSection }) => {
   };
 
   return (
-    <aside className="w-full h-screen sticky top-0 flex flex-col justify-between py-24">
+    <aside className="w-full h-[300px] xl:h-screen  sticky top-0 flex flex-col justify-between py-24">
       <div>
         <h1 className="text-4xl font-bold text-white">
           Nguyen Thanh Tien <br /> (Finnng)
         </h1>
       </div>
 
-      <nav className="mt-10">
+      <nav className="mt-10 hidden xl:block">
         <ul className="space-y-4">
           {menuItems.map((item) => (
             <li key={item.id} className="relative">

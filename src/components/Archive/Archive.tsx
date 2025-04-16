@@ -1,13 +1,37 @@
 "use client";
-import { FC } from "react";
-import { projectsData } from "@/data/projectsData";
+import { FC, useEffect, useState } from "react";
+import axios from "axios";
+import { useTranslation } from "react-i18next";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { IoArrowBackOutline } from "react-icons/io5";
 import Link from "next/link";
 
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  stars?: number;
+  downloads?: string;
+  techStack: string[];
+}
+
 const Archive: FC = () => {
+  const { i18n } = useTranslation();
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const res = await axios.get(`/api/projects?lang=${i18n.language}`);
+      setProjects(res.data.projects);
+    };
+
+    fetchProjects();
+  }, [i18n.language]);
+
   return (
-    <section className="w-ful mt-20">
+    <section className="w-full mt-20">
       <div className="mb-8 flex items-center space-x-2">
         <IoArrowBackOutline className="text-gray-400 text-xl" />
         <Link href="/" className="text-teal-400 hover:underline text-lg">
@@ -21,25 +45,23 @@ const Archive: FC = () => {
         <table className="w-full border-collapse">
           <thead>
             <tr className="text-gray-400 text-left text-sm text-white border-b border-gray-700">
-              <th className="py-3">Year</th>
+              <th className="py-3">ID</th>
               <th className="py-3">Project</th>
-              <th className="py-3">Made at</th>
-              <th className="py-3">Built with</th>
+              <th className="py-3">Tech Stack</th>
               <th className="py-3">Link</th>
             </tr>
           </thead>
           <tbody>
-            {projectsData.map((project, index) => (
+            {projects.map((project) => (
               <tr
-                key={index}
+                key={project.id}
                 className="border-b border-gray-700 hover:bg-gray-800 transition-colors"
               >
-                <td className="py-4 pr-4 text-gray-400">{project.year}</td>
-                <td className="py-4 text-white font-semibold">{project.name}</td>
-                <td className="py-4 pr-4 text-gray-400">{project.company}</td>
+                <td className="py-4 pr-4 text-gray-400">{project.id}</td>
+                <td className="py-4 text-white font-semibold">{project.title}</td>
                 <td className="py-4">
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, idx) => (
+                    {project.techStack.map((tech, idx) => (
                       <span
                         key={idx}
                         className="bg-muteBg text-teal-300 px-3 py-1 text-sm rounded-full"
@@ -50,21 +72,19 @@ const Archive: FC = () => {
                   </div>
                 </td>
                 <td className="py-4">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-teal-300 flex items-center gap-1"
-                  >
-                    {project.link !== "#" ? (
-                      <>
-                        {project.link.replace("https://", "")}
-                        <FaExternalLinkAlt className="text-xs" />
-                      </>
-                    ) : (
-                      "N/A"
-                    )}
-                  </a>
+                  {project.link !== "#" && project.link !== "" ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-teal-300 flex items-center gap-1"
+                    >
+                      {project.link.replace(/^https?:\/\//, "")}
+                      <FaExternalLinkAlt className="text-xs" />
+                    </a>
+                  ) : (
+                    <span className="text-gray-400">N/A</span>
+                  )}
                 </td>
               </tr>
             ))}

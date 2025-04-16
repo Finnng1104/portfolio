@@ -45,14 +45,12 @@ const Home = () => {
   }, [activeSection]);
 
   return (
-    <main className="grid grid-cols-1 md:grid-cols-5 min-h-screen w-full">
-  {/* Sidebar: chiếm 2/5 từ md trở lên */}
-  <div className="hidden md:block md:col-span-2">
+    <main className="grid grid-cols-1 xl:grid-cols-5 min-h-screen w-full">
+  <div className="block px-4 xl:px-0 xl:col-span-2">
     <Sidebar activeSection={activeSection} />
   </div>
 
-  {/* Main Content: chiếm 3/5 */}
-  <div className="col-span-1 md:col-span-3 px-4 sm:px-6 md:px-12 pt-24 flex flex-col gap-12">
+  <div className="col-span-1 xl:col-span-3 px-4 sm:px-6 xl:px-12 pt-24 flex flex-col gap-12">
     <section id="about" className="scroll-mt-24">
       <About />
     </section>

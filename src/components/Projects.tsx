@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 import Image from "next/image";
-import { FaExternalLinkAlt, FaStar, FaDownload } from "react-icons/fa";
+import { FaExternalLinkAlt, FaDownload } from "react-icons/fa";
 
 interface Project {
   id: number;
@@ -19,24 +19,22 @@ interface Project {
 const Projects = () => {
   const { i18n } = useTranslation();
   const [projects, setProjects] = useState<Project[]>([]);
-  const [page, setPage] = useState(1);
-  const limit = 4;
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const res = await axios.get(
-        `/api/projects?lang=${i18n.language}&page=${page}&limit=${limit}`
-      );
+      const res = await axios.get(`/api/projects?lang=${i18n.language}`);
       setProjects(res.data.projects);
     };
 
     fetchProjects();
-  }, [i18n.language, page]);
+  }, [i18n.language]);
 
   return (
     <section className="w-full py-24">
-      <h2 className="text-3xl font-bold text-white mb-10">Projects</h2>
-
+      <h2 className="text-3xl font-bold text-white mb-10">
+        {t("projects")}
+      </h2>
       <div className="space-y-8">
         {projects.map((project) => (
           <div
@@ -63,11 +61,6 @@ const Projects = () => {
               </a>
               <p className="text-gray-400 mt-2">{project.description}</p>
 
-              {project.stars && (
-                <p className="text-gray-400 mt-2 flex items-center gap-2">
-                  <FaStar className="text-yellow-400" /> {project.stars}
-                </p>
-              )}
               {project.downloads && (
                 <p className="text-gray-400 mt-2 flex items-center gap-2">
                   <FaDownload className="text-teal-400" /> {project.downloads}
@@ -89,28 +82,12 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Pagination */}
-      <div className="flex justify-center mt-10 space-x-4">
-        <button
-          onClick={() => setPage((p) => Math.max(p - 1, 1))}
-          className="px-4 py-2 bg-[#1E293B] text-gray-200 rounded hover:bg-[#334155]"
-        >
-          Prev
-        </button>
-        <button
-          onClick={() => setPage((p) => p + 1)}
-          className="px-4 py-2 bg-[#1E293B] text-gray-200 rounded hover:bg-[#334155]"
-        >
-          Next
-        </button>
-      </div>
-
       <div className="mt-10 text-center">
         <a
           href="/archive"
           className="text-teal-300 flex items-center justify-center gap-2 text-lg hover:underline"
         >
-          View Full Project Archive →
+         {t("view_full_project_archive")}
         </a>
       </div>
     </section>

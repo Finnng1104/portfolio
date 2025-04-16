@@ -1,0 +1,44 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "year": "10/03/2025 - 15/04/2025",
+      "company": "BookZone",
+      "link": "https://bookzone.io.vn",
+      "techStack": ["NextJS", "Express", "MongoDB", "Vercel"],
+      "i18n": {
+        "en": {
+          "position": "Frontend Developer",
+          "description": "Built a modern and responsive UI for an online ebook library using Next.js. Implemented multilingual support (i18n), dynamic routing for API-driven book content, and a seamless download experience. Focused on performance optimization and clean component architecture for maintainability."
+        },
+        "vi": {
+          "position": "Lập trình viên Frontend",
+          "description": "Phát triển giao diện người dùng hiện đại và responsive cho thư viện ebook trực tuyến bằng Next.js. Triển khai hỗ trợ đa ngôn ngữ (i18n), định tuyến động cho nội dung sách dựa trên API, và trải nghiệm tải sách mượt mà. Tập trung tối ưu hiệu suất và kiến trúc component dễ bảo trì."
+        }
+      }
+    },
+    {
+      "id": 2,
+      "year": "01/2025 — Present",
+      "company": "COZA Store",
+      "link": "http://localhost:3000",
+      "techStack": [
+        "Next.js",
+        "TailwindCSS",
+        "Express.js",
+        "Node.js",
+        "MongoDB"
+      ],
+      "i18n": {
+        "en": {
+          "position": "Fullstack Developer",
+          "description": "Developed a full-featured fashion e-commerce platform using the MERN stack and TailwindCSS. Built modular product listings with dynamic filtering by category, size, and color. Integrated secure cart and order systems, managed MongoDB product data, and handled responsive design across devices."
+        },
+        "vi": {
+          "position": "Lập trình viên Fullstack",
+          "description": "Phát triển nền tảng thương mại điện tử thời trang đầy đủ chức năng bằng MERN stack và TailwindCSS. Xây dựng hệ thống danh mục sản phẩm linh hoạt với khả năng lọc theo danh mục, kích cỡ, màu sắc. Tích hợp hệ thống giỏ hàng và đặt hàng an toàn, quản lý dữ liệu sản phẩm với MongoDB và đảm bảo giao diện responsive trên mọi thiết bị."
+        }
+      }
+    }
+  ]
+}
