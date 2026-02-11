@@ -11,10 +11,6 @@ interface SidebarProps {
 const Sidebar: FC<SidebarProps> = ({ activeSection }) => {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    console.log("✅ Sidebar Updated - Active Section:", activeSection);
-  }, [activeSection]);
-
   const menuItems = [
     { id: "about", label: t("about") },
     { id: "experience", label: t("experience") },
@@ -24,15 +20,26 @@ const Sidebar: FC<SidebarProps> = ({ activeSection }) => {
   const socialLinks = [
     { href: "https://gitlab.com/Finnng1104", icon: <FaGithub /> },
     { href: "https://www.linkedin.com/in/finnng1104/", icon: <FaLinkedin /> },
-    { href: "https://www.facebook.com/Finnng1104/", icon: <FaFacebook /> }
+    { href: "https://www.facebook.com/Finnng1104/", icon: <FaFacebook /> },
   ];
-
   const handleScrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const offset = 96;
+      const sectionPosition =
+        section.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: sectionPosition - offset,
+        behavior: "smooth",
+      });
     }
   };
+  // const handleScrollToSection = (sectionId: string) => {
+  //   const section = document.getElementById(sectionId);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <aside className="w-full h-[300px] xl:h-screen  sticky top-0 flex flex-col justify-between py-24">

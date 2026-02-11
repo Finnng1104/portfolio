@@ -1,25 +1,29 @@
 {
-    "job_title": "Kỹ sư Frontend",
-    "about": "Giới thiệu",
-    "experience": "Kinh nghiệm",
-    "projects": "Dự án",
-    "hero_title": "Xin chào, tôi là Brittany Chiang",
-    "hero_description": "Tôi xây dựng các trải nghiệm web chính xác và thân thiện với người dùng.",
-    "about_section": {
-      "title": "Brittany Chiang",
-      "description_1": "Tôi là một Frontend Developer đam mê tạo ra những trải nghiệm web mượt mà, tối ưu và trực quan. Hiện tôi đang theo học tại Trường cao đẳng FPT Polytechnic, chuyên ngành Lập trình web. Trong quá trình học tập, tôi đã thực hiện nhiều dự án cá nhân và nhóm, giúp nâng cao kỹ năng lập trình, tư duy thiết kế UI/UX và tối ưu hóa giao diện người dùng.",
-      "short_term_goals": {
-        "title": "Mục tiêu ngắn hạn",
-        "goal_1": "Phát triển kỹ năng Frontend chuyên sâu, đặc biệt là React, Next.js, TypeScript.",
-        "goal_2": "Nâng cao kỹ năng làm việc nhóm trong môi trường Agile/Scrum.",
-        "goal_3": "Cải thiện kỹ năng Tiếng Anh chuyên ngành IT để giao tiếp và đọc tài liệu tốt hơn."
-      },
-      "long_term_goals": {
-        "title": "Mục tiêu dài hạn",
-        "goal_1": "Trở thành Frontend Developer chuyên nghiệp, xây dựng UI/UX mượt mà, tối ưu hiệu suất và nâng cao trải nghiệm người dùng.",
-        "goal_2": "Học thêm Backend (Node.js, NestJS, MongoDB/PostgreSQL) để phát triển thành Full Stack Developer",
-        "goal_3": "Liên tục cập nhật công nghệ mới, nâng cao tư duy lập trình và giải quyết vấn đề."
-      }
+  "job_title": "Kỹ sư Frontend",
+  "about": "Giới thiệu",
+  "experience": "Kinh nghiệm",
+  "projects": "Dự án",
+  "hero_title": "Xin chào, tôi là Brittany Chiang",
+  "hero_description": "Tôi xây dựng các trải nghiệm web chính xác và thân thiện với người dùng.",
+  "about_section": {
+    "title": "Brittany Chiang",
+    "description_1": "Tôi là Frontend Developer tập trung vào việc xây dựng trải nghiệm web mượt mà, trực quan và tối ưu hiệu suất. Với tôi, một giao diện tốt không chỉ “đẹp” mà còn phải hoạt động ổn định, phản hồi tự nhiên và dễ tiếp cận với mọi người — nơi kỹ thuật và sáng tạo hòa làm một để tạo nên trải nghiệm số có chiều sâu.",
+    "description_2": "Hiện tôi đang phát triển chuyên sâu trong Frontend hiện đại với React, Next.js và TypeScript, đồng thời khám phá Web 3D (Three.js) cùng motion design để mang lại cảm giác sống động và tinh tế hơn trong từng tương tác.",
+    "description_3": "Tôi đã triển khai một số sản phẩm thực tế như BookZone, Beef Beef Restaurant, và finnng.io.vn, đảm nhiệm toàn bộ phần UI architecture, responsive design và hiệu năng hiển thị. Hiện tôi đang làm việc tại một công ty công nghệ tại TP.HCM với vai trò Frontend Developer, tập trung vào việc phát triển và tối ưu hóa hệ thống UI component nội bộ, giúp tôi rèn luyện khả năng thiết kế giao diện ở quy mô lớn và duy trì tính đồng nhất trong trải nghiệm người dùng.",
+    "description_4": "Tôi từng đạt Giải Nhì FPT Hackathon 2025, với dự án hướng tới giải pháp web sáng tạo và tối ưu trải nghiệm người dùng. Hiện tại, tôi tiếp tục khai thác sâu hơn về motion, micro-interaction và Web 3D, hướng tới việc tạo nên những giao diện không chỉ hiệu quả và thẩm mỹ, mà còn mang lại cảm xúc thật sự cho người dùng.",
+    "short_term_goals": {
+      "title": "Mục tiêu ngắn hạn",
+      "goal_1": "Phát triển kỹ năng Frontend chuyên sâu, đặc biệt là React, Next.js, TypeScript.",
+      "goal_2": "Nâng cao kỹ năng làm việc nhóm trong môi trường Agile/Scrum.",
+      "goal_3": "Cải thiện kỹ năng Tiếng Anh chuyên ngành IT để giao tiếp và đọc tài liệu tốt hơn."
     },
-    "view_full_project_archive": "Xem toàn bộ dự án →"
-  }
+    "long_term_goals": {
+      "title": "Mục tiêu dài hạn",
+      "goal_1": "Trở thành Frontend Developer chuyên nghiệp, xây dựng UI/UX mượt mà, tối ưu hiệu suất và nâng cao trải nghiệm người dùng.",
+      "goal_2": "Học thêm Backend (Node.js, NestJS, MongoDB/PostgreSQL) để phát triển thành Full Stack Developer",
+      "goal_3": "Liên tục cập nhật công nghệ mới, nâng cao tư duy lập trình và giải quyết vấn đề."
+    }
+  },
+  "view_full_project_archive": "Xem toàn bộ dự án →",
+  "all_projects": "Tất cả dự án"
+}

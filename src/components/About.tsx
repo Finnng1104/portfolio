@@ -7,22 +7,11 @@ const About: FC = () => {
 
   return (
     <section id="about" className="flex flex-col justify-center">
-      <div className="max-w-3xl text-gray-400 text-lg leading-relaxed">
+      <div className="max-w-3xl text-gray-400 text-lg leading-relaxed space-y-6">
         <p>{t("about_section.description_1")}</p>
-
-        <h3 className="text-xl text-white font-bold mt-6">{t("about_section.short_term_goals.title")}</h3>
-        <ul className="list-disc list-inside mt-4 space-y-2">
-          <li>{t("about_section.short_term_goals.goal_1")}</li>
-          <li>{t("about_section.short_term_goals.goal_2")}</li>
-          <li>{t("about_section.short_term_goals.goal_3")}</li>
-        </ul>
-
-        <h3 className="text-xl text-white font-bold mt-6">{t("about_section.long_term_goals.title")}</h3>
-        <ul className="list-disc list-inside mt-4 space-y-2">
-          <li>{t("about_section.long_term_goals.goal_1")}</li>
-          <li>{t("about_section.long_term_goals.goal_2")}</li>
-          <li>{t("about_section.long_term_goals.goal_3")}</li>
-        </ul>
+        <p>{t("about_section.description_2")}</p>
+        <p>{t("about_section.description_3")}</p>
+        <p>{t("about_section.description_4")}</p>
       </div>
     </section>
   );

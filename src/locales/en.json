@@ -1,25 +1,29 @@
 {
-    "job_title": "Front End Engineer",
-    "about": "About",
-    "experience": "Experience",
-    "projects": "Projects",
-    "hero_title": "Hi, I'm Brittany Chiang",
-    "hero_description": "I build accessible, pixel-perfect digital experiences for the web.",
-    "about_section": {
-        "title": "Brittany Chiang",
-        "description_1": "I am a Frontend Developer passionate about creating smooth, optimized, and intuitive web experiences. I am currently studying at FPT Polytechnic College, majoring in Web Development. Throughout my studies, I have worked on various personal and group projects, helping me improve my programming skills, UI/UX design thinking, and user interface optimization.",
-        "short_term_goals": {
-            "title": "Short-term Goals",
-            "goal_1": "Develop in-depth Frontend skills, especially in React, Next.js, and TypeScript.",
-            "goal_2": "Enhance teamwork skills in an Agile/Scrum environment.",
-            "goal_3": "Improve IT-related English skills to communicate and read technical documents better."
-        },
-        "long_term_goals": {
-            "title": "Long-term Goals",
-            "goal_1": "Become a professional Frontend Developer, capable of building smooth UI/UX, optimizing performance, and improving user experience.",
-            "goal_2": "Expand knowledge in Backend (Node.js, NestJS, MongoDB/PostgreSQL) to become a Full Stack Developer.",
-            "goal_3": "Continuously update on new technologies, enhance programming thinking, and problem-solving skills."
-        }
+  "job_title": "Front End Engineer",
+  "about": "About",
+  "experience": "Experience",
+  "projects": "Projects",
+  "hero_title": "Hi, I'm Brittany Chiang",
+  "hero_description": "I build accessible, pixel-perfect digital experiences for the web.",
+  "about_section": {
+    "title": "Brittany Chiang",
+    "description_1": "I’m a Frontend Developer focused on crafting smooth, intuitive, and high-performance web experiences. To me, a great interface isn’t just about how it looks — it’s about how it feels: responsive, accessible, and thoughtfully built, where engineering and creativity intersect to create meaningful digital experiences.",
+    "description_2": "I’m currently developing my expertise in modern Frontend technologies such as React, Next.js, and TypeScript, while exploring Web 3D (Three.js) and motion design to bring a more dynamic and expressive layer to the web.",
+    "description_3": "I’ve built several real-world products including BookZone, Beef Beef Restaurant, and Finnng.io.vn, handling everything from UI architecture and responsive design to performance optimization. I’m currently working at a tech company in Ho Chi Minh City as a Frontend Developer, where I focus on developing and optimizing internal UI component systems — refining my ability to design at scale and maintain consistency and usability across products.",
+    "description_4": "I was honored to receive Second Place at FPT Hackathon 2025 for a project that explored creative, user-centered web solutions. These days, I’m diving deeper into motion, micro-interactions, and Web 3D, aiming to craft interfaces that are not only efficient and visually refined but also emotionally engaging.",
+    "short_term_goals": {
+      "title": "Short-term Goals",
+      "goal_1": "Develop in-depth Frontend skills, especially in React, Next.js, and TypeScript.",
+      "goal_2": "Enhance teamwork skills in an Agile/Scrum environment.",
+      "goal_3": "Improve IT-related English skills to communicate and read technical documents better."
     },
-   "view_full_project_archive": "View Full Project Archive →"
+    "long_term_goals": {
+      "title": "Long-term Goals",
+      "goal_1": "Become a professional Frontend Developer, capable of building smooth UI/UX, optimizing performance, and improving user experience.",
+      "goal_2": "Expand knowledge in Backend (Node.js, NestJS, MongoDB/PostgreSQL) to become a Full Stack Developer.",
+      "goal_3": "Continuously update on new technologies, enhance programming thinking, and problem-solving skills."
+    }
+  },
+  "view_full_project_archive": "View Full Project Archive →",
+  "all_projects": "All Projects"
 }

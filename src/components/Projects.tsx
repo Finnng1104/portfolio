@@ -31,10 +31,9 @@ const Projects = () => {
   }, [i18n.language]);
 
   return (
-    <section className="w-full py-24">
-      <h2 className="text-3xl font-bold text-white mb-10">
-        {t("projects")}
-      </h2>
+    <section className="w-full pb-10">
+      <h2 className="text-3xl font-bold text-white mb-10">{t("projects")}</h2>
+
       <div className="space-y-8">
         {projects.map((project) => (
           <div
@@ -87,7 +86,7 @@ const Projects = () => {
           href="/archive"
           className="text-teal-300 flex items-center justify-center gap-2 text-lg hover:underline"
         >
-         {t("view_full_project_archive")}
+          {t("view_full_project_archive")}
         </a>
       </div>
     </section>

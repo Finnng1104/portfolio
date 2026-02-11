@@ -19,15 +19,19 @@ interface Project {
 
 const Archive: FC = () => {
   const { i18n } = useTranslation();
+  const { t } = useTranslation();
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const res = await axios.get(`/api/projects?lang=${i18n.language}`);
+      const lang = i18n.language || "en"; 
+      const res = await axios.get(`/api/projects?lang=${lang}`);
       setProjects(res.data.projects);
     };
-
-    fetchProjects();
+  
+    if (i18n.language) {
+      fetchProjects();
+    }
   }, [i18n.language]);
 
   return (
@@ -39,12 +43,12 @@ const Archive: FC = () => {
         </Link>
       </div>
 
-      <h1 className="text-4xl font-bold text-white mb-8">All Projects</h1>
+      <h1 className="text-4xl font-bold text-white mb-8">{t("all_projects")}</h1>
 
       <div className="overflow-x-auto">
         <table className="w-full border-collapse">
           <thead>
-            <tr className="text-gray-400 text-left text-sm text-white border-b border-gray-700">
+            <tr className="text-left text-sm text-white border-b border-gray-700">
               <th className="py-3">ID</th>
               <th className="py-3">Project</th>
               <th className="py-3">Tech Stack</th>
