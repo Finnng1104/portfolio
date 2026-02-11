@@ -1,5 +1,5 @@
 "use client";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
